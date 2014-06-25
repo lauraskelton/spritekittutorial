@@ -14,6 +14,12 @@
 		8270E870195B6A53007A4925 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8270E86E195B6A53007A4925 /* Main.storyboard */; };
 		8270E872195B6A53007A4925 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8270E871195B6A53007A4925 /* Images.xcassets */; };
 		8270E87E195B6A53007A4925 /* SpriteKitTutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270E87D195B6A53007A4925 /* SpriteKitTutorialTests.swift */; };
+		8270E888195B6A6D007A4925 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270E887195B6A6D007A4925 /* GameOverScene.swift */; };
+		8270E88E195B6AA9007A4925 /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8270E88B195B6AA9007A4925 /* background-music-aac.caf */; };
+		8270E88F195B6AA9007A4925 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8270E88C195B6AA9007A4925 /* pew-pew-lei.caf */; };
+		8270E890195B6AA9007A4925 /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8270E88D195B6AA9007A4925 /* sprites.atlas */; };
+		8270E893195B6AD2007A4925 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8270E892195B6AD2007A4925 /* AVFoundation.framework */; };
+		8270E895195B6B66007A4925 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8270E894195B6B66007A4925 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +44,12 @@
 		8270E877195B6A53007A4925 /* SpriteKitTutorialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpriteKitTutorialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8270E87C195B6A53007A4925 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8270E87D195B6A53007A4925 /* SpriteKitTutorialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitTutorialTests.swift; sourceTree = "<group>"; };
+		8270E887195B6A6D007A4925 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		8270E88B195B6AA9007A4925 /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
+		8270E88C195B6AA9007A4925 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
+		8270E88D195B6AA9007A4925 /* sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sprites.atlas; sourceTree = "<group>"; };
+		8270E892195B6AD2007A4925 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8270E894195B6B66007A4925 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8270E893195B6AD2007A4925 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +74,9 @@
 		8270E858195B6A53007A4925 = {
 			isa = PBXGroup;
 			children = (
+				8270E894195B6B66007A4925 /* README.md */,
 				8270E863195B6A53007A4925 /* SpriteKitTutorial */,
+				8270E891195B6AC2007A4925 /* Frameworks */,
 				8270E87A195B6A53007A4925 /* SpriteKitTutorialTests */,
 				8270E862195B6A53007A4925 /* Products */,
 			);
@@ -82,9 +97,11 @@
 				8270E866195B6A53007A4925 /* AppDelegate.swift */,
 				8270E868195B6A53007A4925 /* GameScene.sks */,
 				8270E86A195B6A53007A4925 /* GameScene.swift */,
+				8270E887195B6A6D007A4925 /* GameOverScene.swift */,
 				8270E86C195B6A53007A4925 /* GameViewController.swift */,
 				8270E86E195B6A53007A4925 /* Main.storyboard */,
 				8270E871195B6A53007A4925 /* Images.xcassets */,
+				8270E889195B6AA9007A4925 /* SpriteKitSimpleGameResources */,
 				8270E864195B6A53007A4925 /* Supporting Files */,
 			);
 			path = SpriteKitTutorial;
@@ -113,6 +130,33 @@
 				8270E87C195B6A53007A4925 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8270E889195B6AA9007A4925 /* SpriteKitSimpleGameResources */ = {
+			isa = PBXGroup;
+			children = (
+				8270E88A195B6AA9007A4925 /* Sounds */,
+				8270E88D195B6AA9007A4925 /* sprites.atlas */,
+			);
+			path = SpriteKitSimpleGameResources;
+			sourceTree = "<group>";
+		};
+		8270E88A195B6AA9007A4925 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				8270E88B195B6AA9007A4925 /* background-music-aac.caf */,
+				8270E88C195B6AA9007A4925 /* pew-pew-lei.caf */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		8270E891195B6AC2007A4925 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8270E892195B6AD2007A4925 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			path = SpriteKitTutorial;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,8 +239,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8270E88E195B6AA9007A4925 /* background-music-aac.caf in Resources */,
 				8270E872195B6A53007A4925 /* Images.xcassets in Resources */,
 				8270E869195B6A53007A4925 /* GameScene.sks in Resources */,
+				8270E88F195B6AA9007A4925 /* pew-pew-lei.caf in Resources */,
+				8270E890195B6AA9007A4925 /* sprites.atlas in Resources */,
 				8270E870195B6A53007A4925 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,6 +264,8 @@
 			files = (
 				8270E86B195B6A53007A4925 /* GameScene.swift in Sources */,
 				8270E86D195B6A53007A4925 /* GameViewController.swift in Sources */,
+				8270E895195B6B66007A4925 /* README.md in Sources */,
+				8270E888195B6A6D007A4925 /* GameOverScene.swift in Sources */,
 				8270E867195B6A53007A4925 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

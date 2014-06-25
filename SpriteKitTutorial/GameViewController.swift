@@ -8,6 +8,7 @@
 
 import UIKit
 import SpriteKit
+import AVFoundation
 
 extension SKNode {
     class func unarchiveFromFile(file : NSString) -> SKNode? {
@@ -25,10 +26,30 @@ extension SKNode {
 }
 
 class GameViewController: UIViewController {
-
+    var backgroundMusicPlayer = AVAudioPlayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // play background music
+        let mainBundle = NSBundle.mainBundle()
+        let backgroundMusicUrl = mainBundle.URLForResource("background-music-aac", withExtension: "caf")
+        var error: NSError?
+        backgroundMusicPlayer = AVAudioPlayer(contentsOfURL: backgroundMusicUrl, error: &error)
+        
+        if error {
+            println(error)
+        }
+        
+        backgroundMusicPlayer.numberOfLoops = -1
+        backgroundMusicPlayer.prepareToPlay()
+        backgroundMusicPlayer.play()
+        
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
         if let scene = GameScene.unarchiveFromFile("GameScene") as? GameScene {
             // Configure the view.
             let skView = self.view as SKView
@@ -44,11 +65,11 @@ class GameViewController: UIViewController {
             skView.presentScene(scene)
         }
     }
-
+    
     override func shouldAutorotate() -> Bool {
         return true
     }
-
+    
     override func supportedInterfaceOrientations() -> Int {
         if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
             return Int(UIInterfaceOrientationMask.AllButUpsideDown.toRaw())
@@ -56,10 +77,11 @@ class GameViewController: UIViewController {
             return Int(UIInterfaceOrientationMask.All.toRaw())
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
     }
     
 }
+
