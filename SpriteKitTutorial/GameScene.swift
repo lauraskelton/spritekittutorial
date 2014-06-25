@@ -69,7 +69,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Swarm Draw!";
+        myLabel.text = "Ninja Fight!";
         myLabel.fontSize = 60;
         myLabel.fontColor = UIColor.blackColor()
         myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMaxY(self.frame) - 80)
